@@ -26,7 +26,6 @@
             position: relative;
         }
        
-        /* Cloud background elements */
         .cloud-bg {
             position: fixed;
             z-index: -1;
@@ -34,33 +33,10 @@
             filter: blur(1px);
         }
        
-        .cloud1 {
-            top: 20%;
-            left: 10%;
-            font-size: 8rem;
-            animation: float 15s linear infinite;
-        }
-       
-        .cloud2 {
-            top: 40%;
-            right: 15%;
-            font-size: 12rem;
-            animation: float 20s linear infinite reverse;
-        }
-       
-        .cloud3 {
-            bottom: 15%;
-            left: 20%;
-            font-size: 10rem;
-            animation: float 18s linear infinite;
-        }
-       
-        .cloud4 {
-            top: 15%;
-            right: 25%;
-            font-size: 6rem;
-            animation: float 25s linear infinite reverse;
-        }
+        .cloud1 { top: 20%; left: 10%; font-size: 8rem; animation: float 15s linear infinite; }
+        .cloud2 { top: 40%; right: 15%; font-size: 12rem; animation: float 20s linear infinite reverse; }
+        .cloud3 { bottom: 15%; left: 20%; font-size: 10rem; animation: float 18s linear infinite; }
+        .cloud4 { top: 15%; right: 25%; font-size: 6rem; animation: float 25s linear infinite reverse; }
        
         .header {
             text-align: center;
@@ -121,15 +97,6 @@
             position: relative;
         }
        
-        .media-container {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-       
         #currentMedia {
             max-width: 100%;
             max-height: 100%;
@@ -168,7 +135,6 @@
         .nav-btn:hover {
             transform: scale(1.1);
             background: rgba(255, 255, 255, 0.9);
-            box-shadow: 0 8px 20px rgba(30, 58, 138, 0.15);
         }
        
         .loading {
@@ -176,6 +142,7 @@
             font-size: 1.2rem;
             color: #1e40af;
             text-align: center;
+            width: 100%;
         }
        
         .music-player {
@@ -188,180 +155,9 @@
             box-shadow: 0 10px 30px rgba(30, 58, 138, 0.1);
             border: 1px solid rgba(255, 255, 255, 0.7);
         }
-       
-        .player-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-       
-        .player-header h3 {
-            font-weight: 500;
-            font-size: 1.3rem;
-            color: #1e3a8a;
-        }
-       
-        .player-controls {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-            margin-bottom: 20px;
-        }
-       
-        .control-btn {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.7);
-            border: 1px solid rgba(255, 255, 255, 0.8);
-            color: #1e3a8a;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            font-size: 18px;
-            transition: all 0.3s ease;
-        }
-       
-        .control-btn:hover {
-            background: rgba(255, 255, 255, 0.9);
-            transform: scale(1.1);
-        }
-       
-        .control-btn.play-pause {
-            width: 60px;
-            height: 60px;
-            background: rgba(255, 255, 255, 0.8);
-            font-size: 22px;
-        }
-       
-        .progress-container {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 15px;
-        }
-       
-        .progress-time {
-            font-size: 0.9rem;
-            color: #1e40af;
-            min-width: 40px;
-        }
-       
-        .progress-bar {
-            flex: 1;
-            height: 6px;
-            background: rgba(30, 58, 138, 0.1);
-            border-radius: 3px;
-            cursor: pointer;
-            position: relative;
-        }
-       
-        .progress {
-            height: 100%;
-            background: linear-gradient(to right, #93c5fd, #3b82f6);
-            border-radius: 3px;
-            width: 30%;
-        }
-       
-        .volume-container {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-       
-        .volume-icon {
-            font-size: 20px;
-            color: #1e40af;
-        }
-       
-        .volume-slider {
-            flex: 1;
-            height: 5px;
-            background: rgba(30, 58, 138, 0.1);
-            border-radius: 3px;
-            cursor: pointer;
-            position: relative;
-        }
-       
-        .volume-level {
-            height: 100%;
-            background: linear-gradient(to right, #93c5fd, #3b82f6);
-            border-radius: 3px;
-            width: 70%;
-        }
-       
-        .now-playing {
-            margin-top: 15px;
-            padding: 12px 15px;
-            background: rgba(255, 255, 255, 0.5);
-            border-radius: 10px;
-            font-size: 0.95rem;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: #1e3a8a;
-        }
-       
-        .now-playing i {
-            color: #3b82f6;
-        }
-       
-        @keyframes float {
-            0% { transform: translateY(0px) translateX(0px); }
-            50% { transform: translateY(-20px) translateX(10px); }
-            100% { transform: translateY(0px) translateX(0px); }
-        }
-       
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
-        }
-       
-        @media (max-width: 768px) {
-            .header h1 {
-                font-size: 2.5rem;
-            }
-           
-            .cake-emoji {
-                font-size: 2rem;
-            }
-           
-            .header p {
-                font-size: 1.2rem;
-            }
-           
-            .container {
-                height: 50vh;
-            }
-           
-            .nav-btn {
-                width: 60px;
-                height: 60px;
-                font-size: 24px;
-            }
-           
-            .control-btn {
-                width: 45px;
-                height: 45px;
-            }
-           
-            .control-btn.play-pause {
-                width: 55px;
-                height: 55px;
-            }
-           
-            .cloud-bg {
-                font-size: 5rem !important;
-            }
-        }
     </style>
 </head>
 <body>
-    <!-- Cloud background elements -->
     <div class="cloud-bg cloud1">☁️</div>
     <div class="cloud-bg cloud2">☁️</div>
     <div class="cloud-bg cloud3">☁️</div>
@@ -387,7 +183,6 @@
         </div>
     </div>
 
-    <!-- YouTube Music Player -->
     <div class="music-player">
         <div class="player-header">
             <h3>Birthday Music</h3>
@@ -411,22 +206,17 @@
         </div>
     </div>
 
-    <!-- YouTube iframe (hidden) -->
     <iframe id="youtubePlayer" width="0" height="0" 
             src="https://www.youtube.com/embed/IYd1-cPwQCk?enablejsapi=1" 
             frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
             allowfullscreen></iframe>
 
     <script>
-        // Cloud Viewer Functionality
         let cloudPosts = [];
-        let currentIndex = 0;
         let currentMediaElement = document.getElementById('currentMedia');
-       
-        // YouTube Player
-        let player;
 
-        // Initialize YouTube Player
+        // YouTube Player (unchanged)
+        let player;
         function onYouTubeIframeAPIReady() {
             player = new YT.Player('youtubePlayer', {
                 events: {
@@ -435,11 +225,8 @@
                 }
             });
         }
-
         function onPlayerReady(event) {
-            const playPauseBtn = document.getElementById('playPauseBtn');
-            
-            playPauseBtn.addEventListener('click', function() {
+            document.getElementById('playPauseBtn').addEventListener('click', function() {
                 if (player.getPlayerState() === YT.PlayerState.PLAYING) {
                     player.pauseVideo();
                     this.innerHTML = '<i class="fas fa-play"></i>';
@@ -448,103 +235,84 @@
                     this.innerHTML = '<i class="fas fa-pause"></i>';
                 }
             });
-
-            // Volume control
             document.getElementById('volumeSlider').addEventListener('click', function(e) {
-                const volumeWidth = this.clientWidth;
-                const clickX = e.offsetX;
-                const volume = Math.max(0, Math.min(1, clickX / volumeWidth));
-                player.setVolume(volume * 100);
-                document.getElementById('volumeLevel').style.width = `${volume * 100}%`;
+                const vol = Math.max(0, Math.min(1, e.offsetX / this.clientWidth));
+                player.setVolume(vol * 100);
+                document.getElementById('volumeLevel').style.width = `${vol * 100}%`;
             });
         }
-
         function onPlayerStateChange(event) {
-            const playPauseBtn = document.getElementById('playPauseBtn');
-            if (event.data === YT.PlayerState.PLAYING) {
-                playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>';
-            } else if (event.data === YT.PlayerState.PAUSED || event.data === YT.PlayerState.ENDED) {
-                playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';
-            }
+            const btn = document.getElementById('playPauseBtn');
+            btn.innerHTML = (event.data === YT.PlayerState.PLAYING) ? 
+                '<i class="fas fa-pause"></i>' : '<i class="fas fa-play"></i>';
         }
-
-        // Load YouTube API
         const tag = document.createElement('script');
         tag.src = "https://www.youtube.com/iframe_api";
-        const firstScriptTag = document.getElementsByTagName('script')[0];
-        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        document.getElementsByTagName('script')[0].parentNode.insertBefore(tag, document.getElementsByTagName('script')[0]);
 
-        // Cloud Viewer Functions
         document.getElementById('nextBtn').addEventListener('click', showRandomCloud);
+
+        const proxies = [
+            'https://api.allorigins.win/raw?url=',
+            'https://corsproxy.io/?',
+            'https://proxy.corsfix.com/?'
+        ];
+
+        async function fetchWithProxy(redditUrl) {
+            for (let proxy of proxies) {
+                try {
+                    const response = await fetch(proxy + encodeURIComponent(redditUrl), {
+                        headers: { 'User-Agent': 'BirthdayCloudViewer/1.0' }
+                    });
+                    if (response.ok) return await response.json();
+                } catch (e) {}
+            }
+            throw new Error('All proxies failed');
+        }
 
         async function fetchClouds() {
             const loading = document.getElementById('loading');
             loading.textContent = 'Loading beautiful clouds from Reddit...';
 
             try {
-                // Best working free CORS proxy (2026)
-                const proxy = 'https://corsproxy.io/?';
-                const redditUrl = encodeURIComponent('https://www.reddit.com/r/CLOUDS/top.json?limit=100&t=month');
-                
-                const response = await fetch(proxy + redditUrl, {
-                    headers: {
-                        'User-Agent': 'BirthdayCloudViewer/1.0 (personal use)'
-                    }
-                });
+                const redditUrl = 'https://www.reddit.com/r/CLOUDS/top.json?limit=100&t=month';
+                const data = await fetchWithProxy(redditUrl);
 
-                if (!response.ok) {
-                    throw new Error(`HTTP error! Status: ${response.status}`);
-                }
-
-                const data = await response.json();
-                
-                // Stronger filtering for high-quality cloud images
                 cloudPosts = data.data.children.filter(post => {
                     const p = post.data;
-                    if (p.is_gallery || p.is_self || p.over_18 || p.is_video) return false;
-                    
+                    if (p.is_gallery || p.is_self || p.over_18) return false;
                     const url = p.url || '';
-                    const isImage = /\.(jpg|jpeg|png|gif|webp)$/i.test(url) || 
-                                   p.post_hint === 'image' ||
-                                   url.includes('i.redd.it') ||
-                                   url.includes('imgur.com');
-                    
-                    return isImage;
+                    return /\.(jpg|jpeg|png|gif|webp)$/i.test(url) || 
+                           p.post_hint === 'image' || 
+                           url.includes('i.redd.it');
                 });
 
                 if (cloudPosts.length > 0) {
                     loading.style.display = 'none';
                     showRandomCloud();
                 } else {
-                    throw new Error('No suitable images found');
+                    throw new Error('No images');
                 }
             } catch (error) {
-                console.error('Error fetching clouds:', error);
-                loading.innerHTML = `
-                    Could not load clouds right now.<br>
-                    <small>Reddit access is restricted. Refresh the page to try again.</small>
-                `;
+                console.error(error);
+                loading.innerHTML = `Reddit is blocking access right now.<br>
+                    <small>Try refreshing the page in a minute.</small>`;
             }
         }
 
         function showRandomCloud() {
             if (cloudPosts.length === 0) return;
-            const randomIndex = Math.floor(Math.random() * cloudPosts.length);
-            showCloud(randomIndex);
+            showCloud(Math.floor(Math.random() * cloudPosts.length));
         }
 
         function showCloud(index) {
-            if (index < 0 || index >= cloudPosts.length) return;
-            
-            currentIndex = index;
             const post = cloudPosts[index].data;
-            const loadingIndicator = document.getElementById('loading');
+            const loading = document.getElementById('loading');
             
-            loadingIndicator.style.display = 'block';
-            loadingIndicator.textContent = 'Loading cloud...';
+            loading.style.display = 'block';
+            loading.textContent = 'Loading cloud...';
             currentMediaElement.classList.remove('loaded');
 
-            // Always use image (we filtered out videos)
             if (currentMediaElement.tagName !== 'IMG') {
                 const newImg = document.createElement('img');
                 newImg.id = 'currentMedia';
@@ -553,45 +321,22 @@
             }
 
             currentMediaElement.src = post.url;
-
-            const onMediaLoaded = () => {
-                loadingIndicator.style.display = 'none';
+            currentMediaElement.onload = () => {
+                loading.style.display = 'none';
                 currentMediaElement.classList.add('loaded');
-                
-                // Auto-adjust for portrait/landscape
-                const img = currentMediaElement;
-                if (img.complete) {
-                    adjustImageSize(img);
-                } else {
-                    img.onload = () => adjustImageSize(img);
-                }
             };
-
-            currentMediaElement.onload = onMediaLoaded;
             currentMediaElement.onerror = () => {
-                loadingIndicator.textContent = 'Failed to load this cloud, trying another...';
-                setTimeout(showRandomCloud, 1500);
+                loading.textContent = 'Failed, trying another...';
+                setTimeout(showRandomCloud, 1200);
             };
         }
 
-        function adjustImageSize(img) {
-            const isPortrait = img.naturalHeight > img.naturalWidth * 1.1;
-            if (isPortrait) {
-                img.style.maxHeight = '90vh';
-                img.style.maxWidth = 'auto';
-            } else {
-                img.style.maxWidth = '90vw';
-                img.style.maxHeight = 'auto';
-            }
-        }
-
-        // Initial load
         fetchClouds();
 
-        // Optional: Auto-next every 30 seconds
+        // Auto next every 25 seconds
         setInterval(() => {
-            if (cloudPosts.length > 0) showRandomCloud();
-        }, 30000);
+            if (cloudPosts.length > 3) showRandomCloud();
+        }, 25000);
     </script>
 </body>
 </html>
